@@ -32,7 +32,7 @@ import time
 import os
 import re
 
-BASE_URL = "http://punchplusplus.miscreantpunchers.net/feeds.php?feed=pcres.txt&apikey="
+BASE_URL = "https://punchplusplus.miscreantpunchers.net/feeds.php?feed=pcres.txt&apikey="
 API_KEY = "PLACE_API_KEY_HERE"
 PCRE_FILE = "pcre-punchplusplus"
 REFRESH_TIME=120
