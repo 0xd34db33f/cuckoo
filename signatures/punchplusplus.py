@@ -64,8 +64,12 @@ class NetworkPunchPlusPlus(Signature):
 			for pcre in pcre_contents:
 				if not pcre.startswith("#"):
 					pcre_data = pcre.strip('\n').split('\t')
-					if self.check_url(pattern=pcre_data[0], regex=True):
-						self.add_match(None,"Regex",pcre_data[0]+" - "+pcre_data[1])
+					try:
+						if self.check_url(pattern=pcre_data[0], regex=True):
+							self.add_match(None,"Regex",pcre_data[0]+" - "+pcre_data[1])
+					except Exception,e:
+						#Hrmmm what to do here...
+						i = 0
 
 	def run(self):
 		filePresent = True
